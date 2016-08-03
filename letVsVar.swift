@@ -1,10 +1,10 @@
 import UIKit
-
+ 
 var view1 = UIView()
 view1.alpha = 0.5
-
+ 
 let view2 = UIView()
-view2.alpha = 0.5  //Will this line compile?
+view2.alpha = 0.5 // Will this line compile?
 
-/*First, the difference between var and let is that when you assign a variable using let, this means that the variable cannot be assigned to another value. The trick here is that UIView is a class with reference semantics, so you are able to mutate properties of view2 (change the alpha value), so it will actually compile. 
-
+/* Here's the explanation. Let means that once a variable has been assigned to a value, it can no longer be reassigned to another value. However, in this case, we see that the view2.alpha actually compiles because UIView is a class with reference semantics, meaning that the properties can be mutated. 
+*/
